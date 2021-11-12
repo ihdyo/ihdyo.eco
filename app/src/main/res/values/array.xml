@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <string-array name="variety">
+        <item>- pilih jenis tanaman -</item>
+        <item>Vanda Insularum</item>
+        <item>Dendrobium Thyrsiflorum</item>
+        <item>Vanda Bensonii</item>
+        <item>Dendrobium Moniliforme</item>
+    </string-array>
+</resources>

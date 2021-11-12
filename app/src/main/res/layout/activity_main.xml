@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2500px"
+            android:background="@drawable/bgmain" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:scaleX="0.5"
+                android:scaleY="0.5">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/logoone"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Get Plant, Save Earth"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingTop="150dp"/>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <EditText
+                    android:id="@+id/name"
+                    android:textSize="14dp"
+                    android:hint="mohon masukan nama anda"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:paddingBottom="20dp"
+                    android:textColorHint="@color/whiteSemiTrans"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/white" />
+
+                <EditText
+                    android:id="@+id/address"
+                    android:textSize="14dp"
+                    android:hint="kemana pesanan akan dikirimkan?"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:paddingBottom="20dp"
+                    android:textColorHint="@color/whiteSemiTrans"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/white" />
+
+                <Spinner
+                    android:id="@+id/variety"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/white"
+                    android:entries="@array/variety" >
+                </Spinner>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textSize="14dp"
+                        android:hint="tentukan kuantitas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="30dp"
+                        android:textColorHint="@color/white" />
+
+                    <Button
+                        android:id="@+id/minus"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/whiteTrans"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/quantity"
+                        android:textSize="14dp"
+                        android:hint="0"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:textColorHint="@color/white"
+                        android:textColor="@color/white"
+                        android:backgroundTint="@color/white" />
+
+                    <Button
+                        android:id="@+id/plus"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/whiteTrans"
+                        android:text="+" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:textSize="14dp"
+                    android:hint="pilih ekspedisi terpercaya anda"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:textColorHint="@color/white"
+                    android:backgroundTint="@color/white" />
+
+                <RadioGroup
+                    android:id="@+id/shipping"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:textColorHint="@color/white"
+                    android:layout_marginBottom="10dp" >
+
+                    <RadioButton
+                        android:id="@+id/fedex"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:backgroundTint="@color/white"
+                        android:paddingLeft="10dp"
+                        android:text="FedEx" />
+
+                    <RadioButton
+                        android:id="@+id/ninjavan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:backgroundTint="@color/white"
+                        android:paddingLeft="10dp"
+                        android:text="Ninja Van" />
+
+                    <RadioButton
+                        android:id="@+id/jne"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/white"
+                        android:text="JNE" />
+                </RadioGroup>
+
+                <TextView
+                    android:textSize="14dp"
+                    android:hint="tambahkan item lainnya"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:textColorHint="@color/white"
+                    android:backgroundTint="@color/white" />
+
+                <CheckBox
+                    android:id="@+id/npk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/white"
+                    android:text="NPK" />
+
+                <CheckBox
+                    android:id="@+id/compost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/white"
+                    android:text="Kompos" />
+
+                <CheckBox
+                    android:id="@+id/vitamin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/white"
+                    android:text="Vitamin B" />
+
+                <Button
+                    android:id="@+id/order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/green"
+                    android:text="Pesan Sekarang"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</androidx.core.widget.NestedScrollView>
